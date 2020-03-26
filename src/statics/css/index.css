@@ -1,0 +1,122 @@
+*{
+  color: white;
+}
+
+body,
+html {
+    width: 99;
+    background-color: #191919;
+    scroll-behavior: smooth;
+    background-image: url('images/worldbackground.jpg');
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a{
+  position: absolute;
+}
+
+footer {
+  margin-top: 101%;
+  width: 99%;
+  position: absolute;
+  padding: 2%;
+  text-align: center;
+}
+
+button {
+  position: absolute;
+}
+
+.scrolldown {
+  margin-left: 45%;
+  color: black;
+}
+
+section:nth-child(2){
+  /* padding: 100px; */
+  box-sizing: border-box;
+}
+
+#button1{
+  margin-top: 45%;
+}
+
+
+.leaderboard{
+  color: white;
+  position: absolute;
+  width: 99%;
+  text-align: center;
+  background-color: #0000007d;
+  margin-top: 30%;
+  font-family: "montserrat", sans-serif;
+  user-select:none;
+
+}
+
+#youtubevid .ytvid
+{
+  margin-left: auto;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
+  height:40%;
+}
+
+#youtubevid.iframe{
+  width:35%;
+  height:40%;
+  margin: 0 auto;
+}
+
+.Cases{
+  display: inline-block;
+  margin: 0 auto;
+  padding: 3%;
+  color: white;
+  font-size: 200%;
+
+}
+
+.summary{
+  position: absolute;
+  font-family: "montserrat", sans-serif;
+  font-size: 200%;
+  text-align: center;
+  background-color: #0000007d;
+  margin-top: 50%;
+  height: 100%;
+}
+
+#particles-js {
+  background-image: url('images/worldbackground.jpg');
+  width: 99%;
+  height: auto;
+  position: absolute;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#particles-js.canvas{
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  #particles-js {
+    background-attachment: scroll;
+  }
+}
