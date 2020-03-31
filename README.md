@@ -2,4 +2,4 @@
 Awareness website for covid-19
 
 ## Demo
-![alt text](https://raw.githubusercontent.com/MrKioZ/covid-19/demo.png?raw=true "Title")
+![demo](https://user-images.githubusercontent.com/38723412/78060808-7728ce00-738c-11ea-8e1b-ba83aecdf5cd.png)
