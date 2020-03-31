@@ -1,7 +1,11 @@
 from django.db import models
+from django.utils.timezone import now
+from datetime import datetime
 
-# Create your models here.
+date = datetime.today()
+
 class Cases(models.Model):
-    Infected_Countries = models.IntegerField()
-    Total_Cases = models.IntegerField()
-    Total_Recoverd = models.IntegerField()
+    confirmed = models.IntegerField()
+    recovered = models.IntegerField()
+    deaths = models.IntegerField()
+    last_updated = models.DateField(default=date)
