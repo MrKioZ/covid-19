@@ -1,83 +1,16 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="{% static 'js/counterUp/count-up.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <title>COVID 19 Statisticse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>COVID-19</title>
   </head>
   <body>
-    <!-- Particles -->
-    <div id="particles-js"></div>
-    <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
-
-    <div id="YTVideo">
-      <iframe src="https://www.youtube-nocookie.com/embed/BtN-goy9VOY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-
-    <div id='leaderboard'>
-
-      <ul>
-        <li>Confirmed Cases<br><div class='countupconfirmed'>{{ cases.confirmed }}</div></li>
-        <li>Recovered Cases<br><div class='countup'>{{ cases.recovered }}</div></li>
-        <li>Fatel Cases<br><div class='countup'>{{ cases.deaths }}</div></li>
-      </ul>
-
-    </div>
-
-    <script type="text/javascript">
-      $(function(){
-        var current = 0;
-        var finish = {{ cases.confirmed }};
-        var miliseconds = 1500;
-        var rate = {{ cases.confirmed }}/3;
-
-        var counter = setInterval(function(){
-             if(current >= finish) clearInterval(counter);
-             $(".countupconfirmed").text(current);
-             current = parseInt(current) + parseInt(rate);
-        }, miliseconds / (finish / rate));
-      });
-    </script>
-
-    <script type="text/javascript">
-      $(function(){
-        var current = 0;
-        var finish = {{ cases.recovered }};
-        var miliseconds = 1500;
-        var rate = {{ cases.recovered }}/3;
-
-        var counter = setInterval(function(){
-             if(current >= finish) clearInterval(counter);
-             $(".countuprecovered").text(current);
-             current = parseInt(current) + parseInt(rate);
-        }, miliseconds / (finish / rate));
-      });
-    </script>
-
-    <script type="text/javascript">
-      $(function(){
-        var current = 0;
-        var finish = {{ cases.deaths }};
-        var miliseconds = 1500;
-        var rate = 50;
-
-        var counter = setInterval(function(){
-             if(current >= finish) clearInterval(counter);
-             $(".countupdeaths").text(current);
-             current = parseInt(current) + parseInt(rate);
-        }, miliseconds / (finish / rate));
-      });
-    </script>
-
-
+    <div id="app"></div>
+    <script src="{% static 'js/index.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   </body>
 </html>

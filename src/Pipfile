@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+djangorestframework = ">=3.0,<=4.0"
+psycopg2 = "*"
+pycountry = "*"
+decouple = "*"
+Django = "<=3.0,>=2.0"
+
+[requires]
+python_version = "3.7"
